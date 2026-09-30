@@ -1,750 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Termos de Uso — Dinamus Seguros</title>
-<meta name="description" content="Regras de uso do site da Dinamus Seguros, natureza dos simuladores e responsabilidades.">
+<meta name="description" content="As regras de uso do site da Dinamus Seguros: natureza das informações, simuladores, uso permitido e canais oficiais.">
 <meta name="theme-color" content="#1F2845">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20100%20100'%3E%3Crect%20width%3D'100'%20height%3D'100'%20rx%3D'14'%20fill%3D'%231F2845'%2F%3E%3Ctext%20x%3D'50'%20y%3D'72'%20font-family%3D'Helvetica%2CArial'%20font-size%3D'64'%20font-weight%3D'bold'%20fill%3D'%23F0532B'%20text-anchor%3D'middle'%3ED%3C%2Ftext%3E%3C%2Fsvg%3E">
-<title>Dinamus Seguros</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Termos de Uso — Dinamus">
+<meta property="og:description" content="As regras de uso do site da Dinamus Seguros: natureza das informações, simuladores, uso permitido e canais oficiais.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<title>Termos de Uso — Dinamus</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-
-<style>
-/* ============================================================
-   DINAMUS — sistema visual
-   Tokens de marca ficam no bloco :root. Para aplicar o manual
-   da Dinamus, troque apenas --brand-ink, --brand-accent e as
-   famílias tipográficas.
-   ============================================================ */
-:root{
-  /* cor */
-  --brand-ink:#1F2845;
-  --brand-ink-2:#2E3A63;
-  --brand-accent:#F0532B;
-  --brand-accent-soft:#FFE7DE;
-  --ok:#1E7A5A;
-
-  --bg:#F3F3F0;
-  --surface:#FFFFFF;
-  --surface-2:#ECEDEA;
-  --line:#D8D9D3;
-  --line-strong:#B9BBB3;
-  --text:#1F2845;
-  --text-2:#5A6079;
-  --text-3:#858AA0;
-  --on-ink:#F3F3F0;
-  --on-ink-2:#A9AFCB;
-  --panel:#1F2845;
-  --on-panel:#F3F3F0;
-  --on-panel-2:#A9AFCB;
-  --focus:#F0532B;
-
-  /* tipografia */
-  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-
-  --step--1:clamp(.78rem,.76rem + .1vw,.84rem);
-  --step-0:clamp(1rem,.97rem + .15vw,1.06rem);
-  --step-1:clamp(1.18rem,1.1rem + .35vw,1.35rem);
-  --step-2:clamp(1.45rem,1.3rem + .7vw,1.85rem);
-  --step-3:clamp(1.85rem,1.55rem + 1.4vw,2.6rem);
-  --step-4:clamp(2.35rem,1.8rem + 2.6vw,4rem);
-  --step-5:clamp(2.2rem,1.55rem + 2.9vw,3.6rem);
-
-  /* layout */
-  --gutter:clamp(1.15rem,4vw,3.5rem);
-  --maxw:1240px;
-  --radius:4px;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0C1030;
-    --surface:#141A40;
-    --surface-2:#1B2250;
-    --line:#2B3366;
-    --line-strong:#3D477F;
-    --text:#EDEEF6;
-    --text-2:#AEB4D2;
-    --text-3:#8087AB;
-    --brand-ink:#EDEEF6;
-    --brand-ink-2:#C7CBE4;
-    --brand-accent:#FF7A4F;
-    --brand-accent-soft:#3A2118;
-    --ok:#4BC49A;
-    --on-ink:#0C1030;
-    --on-ink-2:#4A5388;
-    --panel:#1B2250;
-    --on-panel:#EDEEF6;
-    --on-panel-2:#9AA1C6;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0C1030;
-  --surface:#141A40;
-  --surface-2:#1B2250;
-  --line:#2B3366;
-  --line-strong:#3D477F;
-  --text:#EDEEF6;
-  --text-2:#AEB4D2;
-  --text-3:#8087AB;
-  --brand-ink:#EDEEF6;
-  --brand-ink-2:#C7CBE4;
-  --brand-accent:#FF7A4F;
-  --brand-accent-soft:#3A2118;
-  --ok:#4BC49A;
-  --on-ink:#0C1030;
-  --on-ink-2:#4A5388;
-  --panel:#1B2250;
-  --on-panel:#EDEEF6;
-  --on-panel-2:#9AA1C6;
-}
-
-*,*::before,*::after{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto;}
-  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
-}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--body);
-  font-size:var(--step-0);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.04;letter-spacing:-.02em;text-wrap:balance;margin:0;}
-p{margin:0;}
-a{color:inherit;}
-img,svg{max-width:100%;}
-button,input,select,textarea{font:inherit;color:inherit;}
-:focus-visible{outline:2.5px solid var(--focus);outline-offset:3px;border-radius:2px;}
-
-.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter);}
-.eyebrow{
-  font-family:var(--mono);font-size:var(--step--1);text-transform:uppercase;
-  letter-spacing:.14em;color:var(--text-3);margin:0;
-}
-.lede{font-size:var(--step-1);line-height:1.5;color:var(--text-2);max-width:60ch;}
-.section{padding-block:clamp(3.5rem,8vw,7rem);}
-.section-head{display:flex;flex-direction:column;gap:.9rem;max-width:66ch;}
-.rule{height:1px;background:var(--line);border:0;margin:0;}
-
-/* ---------- botões ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  padding:.85rem 1.4rem;border-radius:var(--radius);border:1px solid transparent;
-  font-family:var(--display);font-weight:600;font-size:var(--step-0);
-  text-decoration:none;cursor:pointer;transition:transform .12s ease,background .18s ease,border-color .18s ease,color .18s ease;
-}
-.btn:hover{transform:translateY(-1px);}
-.btn:active{transform:translateY(0);}
-.btn-primary{background:var(--brand-accent);color:#FFF;}
-.btn-primary:hover{background:#D8441F;}
-.btn-ghost{background:transparent;color:var(--text);border-color:var(--line-strong);}
-.btn-ghost:hover{border-color:var(--text);}
-.btn-ink{background:var(--brand-ink);color:var(--on-ink);}
-.btn-ink:hover{background:var(--brand-ink-2);}
-.btn-sm{padding:.55rem 1rem;font-size:var(--step--1);}
-
-/* ---------- header ---------- */
-.site-header{
-  position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
-}
-.header-inner{display:flex;align-items:center;gap:1.5rem;height:70px;}
-.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto;color:var(--text);}
-.brand .logo{height:clamp(19px,2.1vw,26px);width:auto;display:block;}
-.site-footer .brand .logo{height:30px;}
-.nav{display:none;gap:1.6rem;align-items:center;}
-.nav a{
-  text-decoration:none;font-size:var(--step--1);letter-spacing:.02em;color:var(--text-2);
-  padding-block:.3rem;border-bottom:1.5px solid transparent;transition:color .15s,border-color .15s;
-}
-.nav a:hover{color:var(--text);border-bottom-color:var(--brand-accent);}
-@media (min-width:960px){.nav{display:flex;}}
-.header-cta{display:none;}
-@media (min-width:720px){.header-cta{display:inline-flex;}}
-
-/* ---------- hero ---------- */
-.hero{padding-block:clamp(2.75rem,7vw,5.5rem) clamp(2.5rem,6vw,4.5rem);}
-.hero-grid{display:grid;gap:clamp(2.5rem,5vw,4rem);align-items:center;}
-@media (min-width:1000px){.hero-grid{grid-template-columns:1.2fr .8fr;}}
-.hero h1{font-size:var(--step-5);font-weight:800;letter-spacing:-.035em;}
-.hero h1 em{font-style:normal;color:var(--brand-accent);}
-.hero-copy{display:flex;flex-direction:column;gap:1.5rem;}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;}
-.hero-facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;padding-top:1.4rem;border-top:1px solid var(--line);}
-.fact{display:flex;flex-direction:column;gap:.1rem;}
-.fact b{font-family:var(--display);font-size:var(--step-1);font-weight:700;letter-spacing:-.02em;}
-.fact span{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;color:var(--text-3);}
-
-/* motivo visual: o grupo de consórcio */
-.group-panel{
-  background:var(--panel);color:var(--on-panel);border-radius:var(--radius);
-  padding:clamp(1.4rem,3vw,2rem);display:flex;flex-direction:column;gap:1.1rem;
-}
-.group-panel .panel-label{
-  font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--on-panel-2);display:flex;justify-content:space-between;gap:1rem;
-}
-.group-canvas{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;}
-.cell{aspect-ratio:1;background:color-mix(in srgb,var(--on-panel) 14%,transparent);border-radius:1px;}
-.cell.paid{background:color-mix(in srgb,var(--on-panel) 55%,transparent);}
-.cell.win{background:var(--brand-accent);}
-.group-legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.78rem;color:var(--on-panel-2);}
-.group-legend i{display:inline-block;width:9px;height:9px;border-radius:1px;margin-right:.4rem;vertical-align:baseline;}
-
-/* ---------- segmentos ---------- */
-.cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.75rem;}
-@media (min-width:820px){.cards{grid-template-columns:repeat(3,1fr);}}
-.card{background:var(--surface);padding:clamp(1.5rem,3vw,2.2rem);display:flex;flex-direction:column;gap:1rem;}
-.card h3{font-size:var(--step-2);}
-.card .card-range{font-family:var(--mono);font-size:var(--step--1);color:var(--brand-accent);letter-spacing:.02em;}
-.card ul{margin:0;padding-left:1.05rem;color:var(--text-2);display:flex;flex-direction:column;gap:.35rem;font-size:.95rem;}
-.card .card-link{
-  margin-top:auto;font-family:var(--display);font-weight:600;font-size:var(--step--1);
-  text-decoration:none;border-bottom:1.5px solid var(--brand-accent);align-self:flex-start;padding-bottom:2px;
-}
-
-/* ---------- como funciona ---------- */
-.steps{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:2.75rem;}
-@media (min-width:760px){.steps{grid-template-columns:repeat(5,1fr);}}
-.step{background:var(--bg);padding:1.6rem 1.2rem 1.9rem;display:flex;flex-direction:column;gap:.7rem;}
-.step-n{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;color:var(--brand-accent);}
-.step h3{font-size:var(--step-1);}
-.step p{font-size:.93rem;color:var(--text-2);}
-
-/* ---------- simulador ---------- */
-.sim{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:2.5rem;}
-.sim-tabs{display:flex;border-bottom:1px solid var(--line);overflow-x:auto;}
-.sim-tab{
-  flex:1 0 auto;background:transparent;border:0;border-bottom:3px solid transparent;
-  padding:1rem 1.3rem;cursor:pointer;font-family:var(--display);font-weight:600;
-  font-size:var(--step--1);color:var(--text-3);white-space:nowrap;transition:color .15s,border-color .15s,background .15s;
-}
-.sim-tab:hover{color:var(--text);background:var(--surface-2);}
-.sim-tab[aria-selected="true"]{color:var(--text);border-bottom-color:var(--brand-accent);}
-.sim-body{display:grid;gap:0;}
-@media (min-width:900px){.sim-body{grid-template-columns:1fr .85fr;}}
-.sim-controls{padding:clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column;gap:1.7rem;}
-.field{display:flex;flex-direction:column;gap:.6rem;}
-.field-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;}
-.field label{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);}
-.field-value{font-family:var(--display);font-weight:700;font-size:var(--step-2);letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
-input[type=range]{
-  -webkit-appearance:none;appearance:none;width:100%;height:3px;background:var(--line-strong);
-  border-radius:2px;cursor:pointer;
-}
-input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;
-  background:var(--brand-accent);border:3px solid var(--surface);box-shadow:0 0 0 1px var(--brand-accent);
-}
-input[type=range]::-moz-range-thumb{
-  width:22px;height:22px;border-radius:50%;background:var(--brand-accent);
-  border:3px solid var(--surface);box-shadow:0 0 0 1px var(--brand-accent);
-}
-.range-ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.7rem;color:var(--text-3);}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;}
-.chip{
-  background:transparent;border:1px solid var(--line-strong);border-radius:var(--radius);
-  padding:.5rem .9rem;cursor:pointer;font-family:var(--mono);font-size:.82rem;
-  color:var(--text-2);transition:all .15s;
-}
-.chip:hover{border-color:var(--text);color:var(--text);}
-.chip[aria-pressed="true"]{background:var(--brand-ink);border-color:var(--brand-ink);color:var(--on-ink);}
-.sim-result{
-  background:var(--panel);color:var(--on-panel);padding:clamp(1.4rem,3vw,2.2rem);
-  display:flex;flex-direction:column;gap:1.4rem;
-}
-.result-main .result-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-panel-2);}
-.result-main .result-number{
-  font-family:var(--display);font-weight:800;font-size:var(--step-4);letter-spacing:-.035em;
-  line-height:1;margin-top:.35rem;font-variant-numeric:tabular-nums;
-}
-.result-rows{display:flex;flex-direction:column;gap:.1rem;}
-.result-row{
-  display:flex;justify-content:space-between;gap:1rem;padding-block:.6rem;
-  border-top:1px solid color-mix(in srgb,var(--on-panel) 18%,transparent);
-  font-size:.9rem;font-variant-numeric:tabular-nums;
-}
-.result-row span:first-child{color:var(--on-panel-2);}
-.result-row b{font-weight:600;font-family:var(--mono);}
-.result-compare{
-  background:color-mix(in srgb,var(--on-panel) 10%,transparent);border-radius:var(--radius);
-  padding:.95rem 1.1rem;font-size:.88rem;color:var(--on-panel-2);
-}
-.result-compare b{color:var(--on-panel);font-family:var(--mono);}
-.disclaimer{font-size:.78rem;line-height:1.5;color:var(--text-3);margin-top:1.1rem;max-width:78ch;}
-
-/* ---------- comparativo ---------- */
-.table-scroll{overflow-x:auto;margin-top:2.5rem;border:1px solid var(--line);background:var(--surface);}
-table{border-collapse:collapse;width:100%;min-width:640px;}
-th,td{text-align:left;padding:1rem 1.15rem;border-bottom:1px solid var(--line);font-size:.93rem;vertical-align:top;}
-thead th{
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--text-3);font-weight:500;background:var(--surface-2);
-}
-tbody th{font-family:var(--display);font-weight:600;color:var(--text);width:26%;}
-td.hl{background:var(--brand-accent-soft);color:var(--text);}
-tbody tr:last-child th,tbody tr:last-child td{border-bottom:0;}
-
-/* ---------- sobre ---------- */
-.about{display:grid;gap:clamp(2rem,4vw,3.5rem);}
-@media (min-width:900px){.about{grid-template-columns:1fr 1fr;align-items:start;}}
-.about-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);}
-.about-item{display:flex;gap:1.2rem;padding-block:1.15rem;border-bottom:1px solid var(--line);}
-.about-item b{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;color:var(--brand-accent);min-width:8.5rem;padding-top:.2rem;text-transform:uppercase;}
-.about-item p{color:var(--text-2);font-size:.95rem;}
-
-/* ---------- faq ---------- */
-.faq{margin-top:2.5rem;border-top:1px solid var(--line);}
-details{border-bottom:1px solid var(--line);}
-summary{
-  cursor:pointer;list-style:none;padding-block:1.25rem;display:flex;gap:1rem;align-items:baseline;
-  font-family:var(--display);font-weight:600;font-size:var(--step-1);letter-spacing:-.015em;
-}
-summary::-webkit-details-marker{display:none;}
-summary::after{content:"+";margin-left:auto;color:var(--brand-accent);font-weight:600;font-size:1.4rem;line-height:1;}
-details[open] summary::after{content:"–";}
-details p{padding-bottom:1.4rem;color:var(--text-2);max-width:70ch;font-size:.96rem;}
-
-/* ---------- contato ---------- */
-.contact{background:var(--panel);color:var(--on-panel);}
-.contact .eyebrow{color:var(--on-panel-2);}
-.contact h2{color:var(--on-panel);}
-.contact-grid{display:grid;gap:clamp(2rem,4vw,3.5rem);}
-@media (min-width:900px){.contact-grid{grid-template-columns:.85fr 1.15fr;}}
-.contact-copy p{color:var(--on-panel-2);}
-.contact-ways{display:flex;flex-direction:column;gap:.9rem;margin-top:1.8rem;}
-.contact-way{display:flex;flex-direction:column;gap:.15rem;}
-.contact-way span{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--on-panel-2);}
-.contact-way a,.contact-way strong{color:var(--on-panel);text-decoration:none;font-size:1.02rem;font-weight:500;}
-.contact-way a:hover{border-bottom:1px solid var(--brand-accent);}
-form{display:grid;gap:1.1rem;}
-.form-row{display:grid;gap:1.1rem;}
-@media (min-width:640px){.form-row{grid-template-columns:1fr 1fr;}}
-.form-field{display:flex;flex-direction:column;gap:.45rem;}
-.form-field label{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-panel-2);}
-.form-field input,.form-field select{
-  background:color-mix(in srgb,var(--on-panel) 8%,transparent);
-  border:1px solid color-mix(in srgb,var(--on-panel) 22%,transparent);
-  color:var(--on-panel);padding:.85rem .95rem;border-radius:var(--radius);
-}
-.form-field input::placeholder{color:color-mix(in srgb,var(--on-panel) 45%,transparent);}
-.form-field select option{color:#1F2845;background:#FFF;}
-.consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.82rem;color:var(--on-panel-2);line-height:1.45;}
-.consent input{margin-top:.25rem;accent-color:var(--brand-accent);width:1.05rem;height:1.05rem;flex:none;}
-.form-note{font-size:.8rem;color:var(--on-panel-2);}
-
-/* ---------- footer ---------- */
-.site-footer{background:var(--bg);border-top:1px solid var(--line);padding-block:3rem 2.5rem;}
-.footer-grid{display:grid;gap:2rem;}
-@media (min-width:820px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr;}}
-.footer-col h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3);font-weight:500;margin-bottom:.9rem;}
-.footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem;font-size:.92rem;}
-.footer-col a{text-decoration:none;color:var(--text-2);}
-.footer-col a:hover{color:var(--brand-accent);}
-.legal{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.78rem;line-height:1.6;color:var(--text-3);display:flex;flex-direction:column;gap:.8rem;}
-.placeholder{
-  background:var(--brand-accent-soft);color:var(--text);border-radius:2px;padding:0 .28em;
-  font-family:var(--mono);font-size:.9em;
-}
-
-/* whatsapp flutuante */
-.wa-float{
-  position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:60;
-  display:inline-flex;align-items:center;gap:.55rem;background:var(--brand-accent);color:#FFF;
-  text-decoration:none;font-family:var(--display);font-weight:600;font-size:.92rem;
-  padding:.85rem 1.15rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.22);
-  transition:transform .15s ease;
-}
-.wa-float:hover{transform:translateY(-2px);}
-.wa-float svg{flex:none;}
-@media (max-width:520px){.wa-float span{display:none;}.wa-float{padding:.95rem;}}
-.skip{position:absolute;left:-9999px;}
-.skip:focus{left:1rem;top:1rem;position:fixed;z-index:100;background:var(--brand-accent);color:#fff;padding:.7rem 1rem;border-radius:var(--radius);}
-/* ============ multipágina ============ */
-.page{display:none;}
-.page.is-active{display:block;animation:pgin .32s ease both;}
-@keyframes pgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.page.is-active{animation:none;}}
-
-.nav a[aria-current="page"]{color:var(--text);border-bottom-color:var(--brand-accent);}
-.menu-btn{display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid var(--line-strong);border-radius:var(--radius);width:40px;height:40px;cursor:pointer;}
-@media (min-width:960px){.menu-btn{display:none;}}
-.nav-mobile{display:none;border-top:1px solid var(--line);background:var(--bg);}
-.nav-mobile.is-open{display:block;}
-@media (min-width:960px){.nav-mobile{display:none !important;}}
-.nav-mobile ul{list-style:none;margin:0;padding:.5rem 0 1rem;display:flex;flex-direction:column;}
-.nav-mobile a{display:block;padding:.8rem 0;text-decoration:none;color:var(--text-2);border-bottom:1px solid var(--line);}
-.nav-mobile a[aria-current="page"]{color:var(--brand-accent);}
-
-/* faixa de credibilidade */
-.trust{border-block:1px solid var(--line);background:var(--surface);}
-.trust-grid{display:grid;gap:1px;background:var(--line);}
-@media (min-width:760px){.trust-grid{grid-template-columns:repeat(4,1fr);}}
-.trust-item{background:var(--surface);padding:1.5rem clamp(1.15rem,2.5vw,1.8rem);display:flex;flex-direction:column;gap:.35rem;}
-.trust-item b{font-family:var(--display);font-size:var(--step-1);font-weight:700;letter-spacing:-.02em;}
-.trust-item span{font-size:.86rem;color:var(--text-2);line-height:1.45;}
-
-/* cards de vertical */
-.verticals{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.75rem;}
-@media (min-width:900px){.verticals{grid-template-columns:repeat(3,1fr);}}
-.vert{background:var(--surface);padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;gap:1.1rem;text-decoration:none;color:inherit;transition:background .2s;position:relative;}
-.vert:hover{background:var(--surface-2);}
-.vert .vert-icon{width:52px;height:52px;color:var(--brand-accent);}
-.vert h3{font-size:var(--step-2);}
-.vert p{color:var(--text-2);font-size:.95rem;}
-.vert ul{margin:0;padding-left:1.05rem;color:var(--text-2);font-size:.9rem;display:flex;flex-direction:column;gap:.28rem;}
-.vert .vert-go{margin-top:auto;font-family:var(--display);font-weight:600;font-size:var(--step--1);display:inline-flex;align-items:center;gap:.4rem;color:var(--brand-accent);}
-.vert:hover .vert-go{gap:.7rem;}
-
-/* blocos de confiança */
-.assur{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:2.75rem;}
-@media (min-width:680px){.assur{grid-template-columns:repeat(2,1fr);}}
-@media (min-width:1040px){.assur{grid-template-columns:repeat(4,1fr);}}
-.assur-item{background:var(--bg);padding:1.7rem 1.3rem 2rem;display:flex;flex-direction:column;gap:.6rem;}
-.assur-item h3{font-size:var(--step-1);}
-.assur-item p{font-size:.92rem;color:var(--text-2);}
-.assur-item .assur-tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--brand-accent);}
-
-/* números */
-.stats{display:grid;gap:1px;background:color-mix(in srgb,var(--on-panel) 16%,transparent);}
-@media (min-width:640px){.stats{grid-template-columns:repeat(4,1fr);}}
-.stat{background:var(--panel);padding:1.7rem 1.3rem;display:flex;flex-direction:column;gap:.3rem;}
-.stat b{font-family:var(--display);font-size:var(--step-3);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--on-panel);}
-.stat span{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-panel-2);}
-
-/* depoimentos */
-.quotes{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.5rem;}
-@media (min-width:820px){.quotes{grid-template-columns:repeat(3,1fr);}}
-.quote{background:var(--surface);padding:1.7rem;display:flex;flex-direction:column;gap:1rem;}
-.quote p{font-size:1.02rem;line-height:1.55;}
-.quote footer{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-top:auto;}
-
-/* ramos / produtos */
-.grid-2{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.75rem;}
-@media (min-width:700px){.grid-2{grid-template-columns:repeat(2,1fr);}}
-@media (min-width:1040px){.grid-2{grid-template-columns:repeat(3,1fr);}}
-.tile{background:var(--surface);padding:1.6rem 1.5rem 1.9rem;display:flex;flex-direction:column;gap:.7rem;}
-.tile h3{font-size:var(--step-1);}
-.tile p{font-size:.93rem;color:var(--text-2);}
-.tile .tile-cov{font-family:var(--mono);font-size:.74rem;color:var(--brand-accent);letter-spacing:.04em;}
-
-/* mitos */
-.myths{margin-top:2.5rem;display:flex;flex-direction:column;gap:1px;background:var(--line);border-block:1px solid var(--line);}
-.myth{background:var(--bg);padding:1.3rem 0;display:grid;gap:.5rem 1.6rem;}
-@media (min-width:820px){.myth{grid-template-columns:1fr 1.25fr;align-items:baseline;padding-inline:1.4rem;}}
-@media (max-width:819px){.myth{padding-inline:1.2rem;}}
-.myth .m-claim{font-family:var(--display);font-weight:600;font-size:var(--step-1);color:var(--text-3);text-decoration:line-through;text-decoration-color:var(--brand-accent);text-decoration-thickness:2px;}
-.myth .m-truth{color:var(--text-2);font-size:.95rem;}
-
-/* cadastro */
-.lead-panel{background:var(--panel);color:var(--on-panel);border-radius:var(--radius);padding:clamp(1.5rem,3vw,2.4rem);}
-.lead-panel .eyebrow{color:var(--on-panel-2);}
-.lead-panel h3{color:var(--on-panel);font-size:var(--step-2);margin-block:.5rem .4rem;}
-.lead-panel > p{color:var(--on-panel-2);font-size:.95rem;margin-bottom:1.4rem;}
-.lead-panel label{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-panel-2);}
-.lead-panel input,.lead-panel select,.lead-panel textarea{
-  background:color-mix(in srgb,var(--on-panel) 8%,transparent);
-  border:1px solid color-mix(in srgb,var(--on-panel) 22%,transparent);
-  color:var(--on-panel);padding:.85rem .95rem;border-radius:var(--radius);width:100%;
-}
-.lead-panel input::placeholder,.lead-panel textarea::placeholder{color:color-mix(in srgb,var(--on-panel) 45%,transparent);}
-.lead-panel option{color:#1F2845;background:#FFF;}
-.lead-panel .consent{color:var(--on-panel-2);}
-.lead-panel .form-note{color:var(--on-panel-2);}
-
-/* simulação universal */
-.simbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:2.5rem;}
-.simbox-grid{display:grid;}
-@media (min-width:960px){.simbox-grid{grid-template-columns:1.05fr .95fr;}}
-.simbox-side{padding:clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column;gap:1.5rem;}
-.readout{background:var(--panel);color:var(--on-panel);padding:clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column;gap:1.3rem;}
-.readout .r-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-panel-2);}
-.readout .r-big{font-family:var(--display);font-weight:800;font-size:var(--step-4);letter-spacing:-.035em;line-height:1;margin-top:.35rem;font-variant-numeric:tabular-nums;}
-.readout .r-note{font-size:.86rem;color:var(--on-panel-2);line-height:1.5;}
-.mini-rows{display:flex;flex-direction:column;}
-.mini-row{display:flex;justify-content:space-between;gap:1rem;padding-block:.55rem;border-top:1px solid color-mix(in srgb,var(--on-panel) 18%,transparent);font-size:.88rem;font-variant-numeric:tabular-nums;}
-.mini-row span{color:var(--on-panel-2);}
-.mini-row b{font-family:var(--mono);font-weight:600;}
-
-/* passos numerados genéricos */
-.flow{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:2.75rem;}
-@media (min-width:760px){.flow{grid-template-columns:repeat(5,1fr);}}
-.flow-step{background:var(--surface);padding:1.6rem 1.2rem 1.9rem;display:flex;flex-direction:column;gap:.65rem;}
-.flow-step .fn{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;color:var(--brand-accent);}
-.flow-step h3{font-size:var(--step-1);}
-.flow-step p{font-size:.92rem;color:var(--text-2);}
-
-.crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);display:flex;gap:.5rem;align-items:center;}
-.crumb a{text-decoration:none;color:var(--text-3);}
-.crumb a:hover{color:var(--brand-accent);}
-
-
-/* normaliza os marcadores de conteúdo pendente em qualquer contexto */
-span.placeholder{
-  font-family:var(--mono);font-size:.92em;letter-spacing:normal;text-transform:none;
-  background:var(--brand-accent-soft);color:var(--text);border-radius:2px;padding:0 .28em;
-}
-.stat > span{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-panel-2);}
-.contact-way > span{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--on-panel-2);}
-
-/* inventário de patrimônio do herói */
-.asset-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;
-  background:color-mix(in srgb,var(--on-panel) 16%,transparent);}
-.asset{background:var(--panel);display:grid;grid-template-columns:1fr auto;gap:.15rem .9rem;
-  padding:.8rem .2rem;align-items:baseline;}
-@media (min-width:420px){.asset{grid-template-columns:1fr auto auto;}}
-.asset .a-name{font-size:.98rem;}
-.asset .a-val{font-family:var(--mono);font-size:.86rem;color:var(--on-panel-2);font-variant-numeric:tabular-nums;}
-.asset .a-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
-  padding:.2rem .45rem;border-radius:2px;white-space:nowrap;justify-self:start;}
-@media (min-width:420px){.asset .a-tag{justify-self:end;}}
-.asset .a-tag.ok{background:color-mix(in srgb,var(--on-panel) 16%,transparent);color:var(--on-panel-2);}
-.asset .a-tag.gap{background:var(--brand-accent);color:#fff;}
-
-/* subtítulos temáticos do FAQ */
-.faq-group{
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--brand-accent);margin:2.4rem 0 0;padding-bottom:.55rem;
-}
-.faq-group + .faq{margin-top:0;}
-
-/* ilustrações */
-:root{
-  --illo-bg:#E7E9E4; --illo-ground:#D6D9D2;
-  --illo-ink:#1F2845; --illo-soft:#BFC4C0; --illo-accent:#F0532B;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --illo-bg:#1B2250; --illo-ground:#151B41;
-    --illo-ink:#E6E8F4; --illo-soft:#3A4480; --illo-accent:#FF7A4F;
-  }
-}
-:root[data-theme="dark"]{
-  --illo-bg:#1B2250; --illo-ground:#151B41;
-  --illo-ink:#E6E8F4; --illo-soft:#3A4480; --illo-accent:#FF7A4F;
-}
-.illo{display:block;width:100%;height:100%;object-fit:cover;}
-.media{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--illo-bg);}
-.tile{--pad:clamp(1.5rem,2.6vw,2rem);padding:var(--pad);}
-.tile > .media{margin:calc(var(--pad) * -1) calc(var(--pad) * -1) .5rem;}
-.vert{--pad:clamp(1.6rem,3vw,2.4rem);padding:var(--pad);}
-.vert > .media{margin:calc(var(--pad) * -1) calc(var(--pad) * -1) .6rem;aspect-ratio:16/9;}
-.band{margin-top:2.75rem;border:1px solid var(--line);display:grid;}
-@media (min-width:860px){.band{grid-template-columns:1.05fr .95fr;}}
-.band .media{aspect-ratio:16/9;height:100%;}
-.band-copy{padding:clamp(1.6rem,3vw,2.6rem);display:flex;flex-direction:column;gap:.9rem;justify-content:center;background:var(--surface);}
-.band-copy h3{font-size:var(--step-2);}
-.band-copy p{color:var(--text-2);font-size:.96rem;}
-
-/* grades com número fixo de itens — evita célula vazia no fim */
-.flow--6{grid-template-columns:1fr;}
-@media (min-width:620px){.flow--6{grid-template-columns:repeat(2,1fr);}}
-@media (min-width:900px){.flow--6{grid-template-columns:repeat(3,1fr);}}
-@media (min-width:1240px){.flow--6{grid-template-columns:repeat(6,1fr);}}
-.flow--4{grid-template-columns:1fr;}
-@media (min-width:620px){.flow--4{grid-template-columns:repeat(2,1fr);}}
-@media (min-width:1000px){.flow--4{grid-template-columns:repeat(4,1fr);}}
-
-/* foto real substituindo a ilustração */
-.foto{width:100%;height:100%;object-fit:cover;display:block;}
-
-/* herói com foto e painel sobreposto */
-.hero-shot{display:flex;flex-direction:column;}
-.hero-shot .hero-photo{aspect-ratio:4/3;border-radius:var(--radius);}
-.hero-shot .hero-overlay{position:relative;z-index:1;}
-@media (min-width:640px){
-  .hero-shot .hero-photo{aspect-ratio:16/9;}
-  .hero-shot .hero-overlay{margin:-3.2rem 1.4rem 0;box-shadow:0 14px 34px rgba(15,20,45,.22);}
-}
-
-/* páginas legais */
-.legal-doc .wrap{max-width:860px;}
-.legal-doc .lede{max-width:68ch;}
-.doc-meta{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--text-3);
-  margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--line);}
-.doc{margin-top:2.4rem;display:flex;flex-direction:column;gap:.2rem;}
-.doc h2{font-size:var(--step-2);margin-top:2.6rem;display:flex;gap:.9rem;align-items:baseline;}
-.doc h2:first-child{margin-top:0;}
-.doc h2 .n{font-family:var(--mono);font-size:.85rem;color:var(--brand-accent);font-weight:500;
-  letter-spacing:.06em;flex:none;padding-top:.15rem;}
-.doc h3{font-size:var(--step-0);margin-top:1.6rem;color:var(--text);}
-.doc p{margin-top:.9rem;color:var(--text-2);max-width:72ch;line-height:1.68;}
-.doc p strong{color:var(--text);}
-.doc ul{margin:.9rem 0 0;padding-left:1.15rem;display:flex;flex-direction:column;gap:.5rem;
-  color:var(--text-2);max-width:72ch;line-height:1.6;}
-.doc a{color:var(--brand-accent);text-decoration:underline;text-underline-offset:3px;}
-.doc .table-scroll{margin-top:1.4rem;}
-.doc table th[scope=row]{font-family:var(--body);font-weight:500;color:var(--text-2);width:58%;}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){var t=null;try{t=localStorage.getItem('dinamus-tema')}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+document.documentElement.setAttribute('data-theme',t)})();</script>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="index.html" aria-label="Dinamus Seguros, início"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1958.3 183.0" role="img" aria-label="Dinamus Seguros"><defs>
-    <mask id="g-hd" maskUnits="userSpaceOnUse" x="0" y="0" width="832.0" height="736.0">
-      <rect x="0" y="0" width="832.0" height="736.0" fill="#fff"/><rect x="420.0" y="356.0" width="900.0" height="24.0" fill="#000" transform="rotate(-24.0 420.0 368.0)"/><rect x="420.0" y="356.0" width="900.0" height="24.0" fill="#000" transform="rotate(24.0 420.0 368.0)"/>
-    </mask>
-    <mask id="w-hd" maskUnits="userSpaceOnUse" x="0" y="0" width="832.0" height="736.0">
-      <rect x="0" y="0" width="832.0" height="736.0" fill="#000"/>
-      <path d="M 420.0 368.0 L 1242.2 1.9 L 1320.0 -532.0 L 1320.0 1268.0 L 1242.2 734.1 Z" fill="#fff"/><rect x="420.0" y="356.0" width="900.0" height="24.0" fill="#000" transform="rotate(-24.0 420.0 368.0)"/><rect x="420.0" y="356.0" width="900.0" height="24.0" fill="#000" transform="rotate(24.0 420.0 368.0)"/>
-    </mask>
-  </defs><g transform="scale(0.24864)"><g mask="url(#g-hd)" fill="currentColor"><g transform="translate(0.000000,736.000000) scale(0.100000,-0.100000)"><path d="M1060 7228 l0 -13 55 -60 56 -60 69 -76 70 -77 55 -66 54 -66 13 -14
-13 -13 74 -82 73 -81 54 -65 53 -65 13 -14 13 -13 74 -82 73 -81 55 -67 55
--68 7 -5 6 -5 85 -96 85 -95 88 -102 88 -102 982 -1 982 0 75 -9 75 -9 115
--14 115 -14 75 -17 75 -17 65 -20 65 -19 15 0 16 0 19 -14 20 -13 35 -8 35 -8
-35 -18 35 -19 13 0 14 0 25 -20 26 -20 18 0 18 0 7 -11 6 -11 32 -14 31 -15
-42 -27 42 -27 53 -37 53 -36 35 -31 35 -32 65 -62 65 -63 61 -74 60 -75 40
--60 39 -60 16 -30 16 -30 27 -55 27 -55 18 -40 19 -40 14 -35 14 -35 26 -85
-26 -85 21 -80 20 -80 6 -55 6 -55 15 -75 15 -75 -3 -305 -4 -305 -18 -105 -18
--105 -19 -76 -19 -75 0 -20 -1 -19 -19 -40 -19 -40 -1 -23 0 -22 -20 -37 -20
--38 0 -15 0 -16 -14 -19 -13 -20 -8 -25 -8 -25 -18 -24 -19 -24 0 -13 0 -13
--22 -35 -23 -35 -39 -63 -40 -63 -77 -95 -77 -95 -33 -31 -34 -31 -75 -59 -75
--60 -60 -39 -60 -40 -30 -17 -30 -17 -32 -15 -32 -16 -5 -9 -6 -8 -31 -7 -32
--6 -14 -12 -14 -12 -52 -18 -52 -18 -75 -24 -75 -24 -80 -20 -80 -20 -95 -17
--95 -17 -145 -8 -145 -8 -642 -1 -642 -1 -5 -9 -6 -9 58 -75 58 -75 31 -33 31
--34 64 -68 63 -69 9 -16 9 -17 28 -30 27 -30 44 -49 43 -49 39 -41 38 -41 76
--90 75 -90 11 -11 11 -11 74 -82 73 -81 54 -65 53 -65 13 -14 13 -13 71 -79
-71 -79 60 -70 60 -70 21 -18 21 -19 108 6 108 7 65 4 65 5 160 10 159 10 31
-10 30 9 103 11 102 10 63 14 62 14 60 11 60 11 45 11 45 11 80 20 80 20 85 25
-85 25 25 12 25 13 35 7 35 6 30 14 30 14 75 28 75 28 20 12 20 12 32 7 32 6
-12 15 11 14 18 0 17 0 26 20 25 20 15 0 14 0 26 20 25 20 7 0 6 0 82 47 82 47
-95 63 95 63 25 17 25 17 95 75 95 75 44 41 43 40 52 51 51 51 50 54 51 54 60
-75 59 75 40 55 40 55 48 71 47 70 0 9 0 8 14 16 14 16 30 56 29 57 17 23 16
-23 0 15 0 14 14 16 15 16 30 75 30 76 15 29 16 30 0 13 0 13 20 39 20 39 0 21
-0 20 20 37 20 38 0 14 0 15 19 65 20 66 15 55 15 55 25 125 25 125 6 70 7 69
-9 25 10 25 9 210 9 211 1 145 0 145 -9 185 -9 185 -11 45 -10 45 -11 85 -11
-85 -15 70 -16 70 -19 72 -19 73 0 14 0 15 -26 83 -26 83 -25 70 -26 70 -13 40
--14 40 -14 25 -14 25 -6 32 -7 32 -15 12 -14 11 0 18 0 17 -20 26 -20 25 0 15
-0 14 -20 26 -20 25 0 7 0 7 -41 71 -42 72 -65 100 -66 100 -55 70 -54 70 -41
-46 -41 45 -65 74 -65 73 -87 73 -86 72 -37 33 -37 34 -51 37 -52 37 -96 65
--96 66 -10 0 -11 0 -10 13 -10 12 -64 34 -63 33 -40 24 -40 24 -25 11 -25 11
--41 19 -41 19 -10 0 -11 0 -11 14 -12 15 -32 7 -32 6 -25 14 -25 14 -45 16
--45 16 -115 40 -115 41 -65 19 -65 20 -55 13 -55 13 -70 17 -70 16 -65 15 -65
-15 -95 15 -95 15 -60 9 -60 9 -105 11 -105 11 -75 9 -75 9 -1792 0 -1793 1 0
--12z M47 7213 l-7 -6 0 -2662 0 -2661 23 -31 22 -30 72 -79 71 -79 72 -85
-73 -85 67 -75 68 -75 72 -85 72 -85 51 -55 52 -55 49 -60 50 -60 27 -30 27
--30 54 -60 53 -60 26 -30 27 -30 72 -85 72 -85 51 -55 52 -55 49 -60 50 -60
-65 -72 64 -73 14 0 13 0 0 13 0 12 0 1483 0 1483 14 5 15 6 14 -9 15 -8 56
--68 55 -67 13 -14 13 -13 74 -82 73 -81 54 -65 53 -65 13 -14 13 -13 75 -83
-75 -83 49 -61 48 -61 34 -33 34 -32 10 0 10 0 978 0 977 -1 3 14 3 14 -133
-149 -133 150 -45 54 -44 55 -16 16 -15 16 -74 82 -73 81 -54 65 -53 65 -13 14
--13 13 -74 82 -73 81 -54 65 -53 65 -13 14 -13 13 -74 82 -73 81 -54 65 -53
-65 -13 14 -13 13 -74 82 -73 81 -54 65 -53 65 -13 14 -13 13 -74 82 -73 81
--54 65 -53 65 -13 14 -13 13 -74 82 -73 81 -54 65 -53 65 -13 14 -13 13 -74
-82 -73 81 -54 65 -53 65 -13 14 -13 13 -71 79 -71 79 -69 80 -69 81 -100 114
--100 114 -115 130 -115 131 -69 80 -69 80 -67 75 -68 75 -72 85 -73 85 -67 75
--68 75 -72 85 -72 85 -92 99 -91 98 -9 17 -9 16 -28 30 -27 30 -44 49 -43 49
--60 64 -60 65 -9 16 -9 17 -20 23 -20 22 -7 0 -7 0 -6 -7z"/></g></g><g mask="url(#w-hd)" fill="#F0532B"><g transform="translate(0.000000,736.000000) scale(0.100000,-0.100000)"><path d="M1060 7228 l0 -13 55 -60 56 -60 69 -76 70 -77 55 -66 54 -66 13 -14
-13 -13 74 -82 73 -81 54 -65 53 -65 13 -14 13 -13 74 -82 73 -81 55 -67 55
--68 7 -5 6 -5 85 -96 85 -95 88 -102 88 -102 982 -1 982 0 75 -9 75 -9 115
--14 115 -14 75 -17 75 -17 65 -20 65 -19 15 0 16 0 19 -14 20 -13 35 -8 35 -8
-35 -18 35 -19 13 0 14 0 25 -20 26 -20 18 0 18 0 7 -11 6 -11 32 -14 31 -15
-42 -27 42 -27 53 -37 53 -36 35 -31 35 -32 65 -62 65 -63 61 -74 60 -75 40
--60 39 -60 16 -30 16 -30 27 -55 27 -55 18 -40 19 -40 14 -35 14 -35 26 -85
-26 -85 21 -80 20 -80 6 -55 6 -55 15 -75 15 -75 -3 -305 -4 -305 -18 -105 -18
--105 -19 -76 -19 -75 0 -20 -1 -19 -19 -40 -19 -40 -1 -23 0 -22 -20 -37 -20
--38 0 -15 0 -16 -14 -19 -13 -20 -8 -25 -8 -25 -18 -24 -19 -24 0 -13 0 -13
--22 -35 -23 -35 -39 -63 -40 -63 -77 -95 -77 -95 -33 -31 -34 -31 -75 -59 -75
--60 -60 -39 -60 -40 -30 -17 -30 -17 -32 -15 -32 -16 -5 -9 -6 -8 -31 -7 -32
--6 -14 -12 -14 -12 -52 -18 -52 -18 -75 -24 -75 -24 -80 -20 -80 -20 -95 -17
--95 -17 -145 -8 -145 -8 -642 -1 -642 -1 -5 -9 -6 -9 58 -75 58 -75 31 -33 31
--34 64 -68 63 -69 9 -16 9 -17 28 -30 27 -30 44 -49 43 -49 39 -41 38 -41 76
--90 75 -90 11 -11 11 -11 74 -82 73 -81 54 -65 53 -65 13 -14 13 -13 71 -79
-71 -79 60 -70 60 -70 21 -18 21 -19 108 6 108 7 65 4 65 5 160 10 159 10 31
-10 30 9 103 11 102 10 63 14 62 14 60 11 60 11 45 11 45 11 80 20 80 20 85 25
-85 25 25 12 25 13 35 7 35 6 30 14 30 14 75 28 75 28 20 12 20 12 32 7 32 6
-12 15 11 14 18 0 17 0 26 20 25 20 15 0 14 0 26 20 25 20 7 0 6 0 82 47 82 47
-95 63 95 63 25 17 25 17 95 75 95 75 44 41 43 40 52 51 51 51 50 54 51 54 60
-75 59 75 40 55 40 55 48 71 47 70 0 9 0 8 14 16 14 16 30 56 29 57 17 23 16
-23 0 15 0 14 14 16 15 16 30 75 30 76 15 29 16 30 0 13 0 13 20 39 20 39 0 21
-0 20 20 37 20 38 0 14 0 15 19 65 20 66 15 55 15 55 25 125 25 125 6 70 7 69
-9 25 10 25 9 210 9 211 1 145 0 145 -9 185 -9 185 -11 45 -10 45 -11 85 -11
-85 -15 70 -16 70 -19 72 -19 73 0 14 0 15 -26 83 -26 83 -25 70 -26 70 -13 40
--14 40 -14 25 -14 25 -6 32 -7 32 -15 12 -14 11 0 18 0 17 -20 26 -20 25 0 15
-0 14 -20 26 -20 25 0 7 0 7 -41 71 -42 72 -65 100 -66 100 -55 70 -54 70 -41
-46 -41 45 -65 74 -65 73 -87 73 -86 72 -37 33 -37 34 -51 37 -52 37 -96 65
--96 66 -10 0 -11 0 -10 13 -10 12 -64 34 -63 33 -40 24 -40 24 -25 11 -25 11
--41 19 -41 19 -10 0 -11 0 -11 14 -12 15 -32 7 -32 6 -25 14 -25 14 -45 16
--45 16 -115 40 -115 41 -65 19 -65 20 -55 13 -55 13 -70 17 -70 16 -65 15 -65
-15 -95 15 -95 15 -60 9 -60 9 -105 11 -105 11 -75 9 -75 9 -1792 0 -1793 1 0
--12z M47 7213 l-7 -6 0 -2662 0 -2661 23 -31 22 -30 72 -79 71 -79 72 -85
-73 -85 67 -75 68 -75 72 -85 72 -85 51 -55 52 -55 49 -60 50 -60 27 -30 27
--30 54 -60 53 -60 26 -30 27 -30 72 -85 72 -85 51 -55 52 -55 49 -60 50 -60
-65 -72 64 -73 14 0 13 0 0 13 0 12 0 1483 0 1483 14 5 15 6 14 -9 15 -8 56
--68 55 -67 13 -14 13 -13 74 -82 73 -81 54 -65 53 -65 13 -14 13 -13 75 -83
-75 -83 49 -61 48 -61 34 -33 34 -32 10 0 10 0 978 0 977 -1 3 14 3 14 -133
-149 -133 150 -45 54 -44 55 -16 16 -15 16 -74 82 -73 81 -54 65 -53 65 -13 14
--13 13 -74 82 -73 81 -54 65 -53 65 -13 14 -13 13 -74 82 -73 81 -54 65 -53
-65 -13 14 -13 13 -74 82 -73 81 -54 65 -53 65 -13 14 -13 13 -74 82 -73 81
--54 65 -53 65 -13 14 -13 13 -74 82 -73 81 -54 65 -53 65 -13 14 -13 13 -74
-82 -73 81 -54 65 -53 65 -13 14 -13 13 -71 79 -71 79 -69 80 -69 81 -100 114
--100 114 -115 130 -115 131 -69 80 -69 80 -67 75 -68 75 -72 85 -73 85 -67 75
--68 75 -72 85 -72 85 -92 99 -91 98 -9 17 -9 16 -28 30 -27 30 -44 49 -43 49
--60 64 -60 65 -9 16 -9 17 -20 23 -20 22 -7 0 -7 0 -6 -7z"/></g></g></g><g transform="translate(222.87,0) scale(1.00000)"><g transform="translate(0.000000,184.000000) scale(0.050000,-0.050000)" fill="currentColor"><path d="M21210 3668 c-782 -64 -1256 -280 -1431 -653 -165 -353 -111 -863
-117 -1118 122 -135 237 -207 431 -268 295 -93 564 -123 1343 -147 437 -14 511
--21 590 -56 120 -53 163 -106 175 -214 20 -175 -110 -295 -407 -374 -128 -35
--236 -45 -574 -53 -550 -13 -933 21 -1659 147 l-76 13 6 -386 5 -386 60 -16
-c118 -29 497 -78 846 -109 462 -41 1302 -30 1584 22 668 121 1043 385 1152
-809 47 185 31 546 -31 707 -119 309 -374 477 -856 566 -121 22 -377 37 -825
-48 -728 18 -816 32 -934 150 -58 58 -66 79 -66 171 0 99 6 112 86 188 172 165
-500 224 1144 205 407 -12 742 -47 1100 -116 110 -21 211 -38 225 -38 20 0 25
-84 20 385 l-5 385 -169 34 c-315 63 -744 99 -1251 105 -275 4 -545 3 -600 -1z
-M15528 3611 c-6 -16 -8 -536 -3 -1155 8 -1079 11 -1133 53 -1296 72 -279 165
--445 361 -641 142 -142 203 -187 361 -264 217 -107 475 -181 751 -216 278 -35
-908 -14 1129 38 699 164 1066 488 1225 1084 44 166 45 189 45 1319 l0 1150
--470 0 -470 0 -10 -1140 -10 -1140 -63 -121 c-109 -208 -305 -353 -572 -422
--168 -44 -540 -44 -723 1 -287 69 -503 239 -596 468 -46 114 -46 117 -52 1239
-l-6 1125 -469 0 c-392 0 -472 -5 -481 -29z M165 1845 l5 -1775 475 -5 475 -6
-0 1781 0 1780 -480 0 -480 0 5 -1775z M1600 1840 l0 -1780 480 0 480 0 0 1090
-c0 953 4 1090 30 1090 16 0 459 -490 984 -1090 l953 -1090 507 0 506 0 0 1780
-0 1780 -480 0 -480 0 0 -1060 c0 -996 -2 -1060 -35 -1060 -21 0 -405 423 -963
-1060 l-927 1060 -528 0 -527 0 0 -1780z M6363 1855 c-398 -971 -723 -1772
--723 -1780 0 -9 226 -13 502 -10 l503 5 132 335 133 335 1013 0 1013 0 104
--255 c57 -140 121 -293 141 -340 l37 -85 503 0 c471 0 502 2 490 35 -7 19
--334 820 -727 1780 l-714 1744 -842 1 -842 0 -723 -1765z m1865 680 c73 -179
-199 -491 280 -695 l148 -370 -721 -5 c-397 -3 -724 -2 -728 1 -5 6 366 948
-524 1329 l27 65 169 0 168 0 133 -325z M10320 1840 l0 -1781 475 6 475 5 5
-1125 c5 1092 6 1125 43 1125 27 0 191 -197 535 -640 l496 -640 354 0 355 0 70
-85 c39 47 262 333 497 635 300 387 439 552 470 556 l45 7 5 -1127 5 -1126 475
--5 475 -6 0 1781 0 1781 -544 -6 -543 -5 -616 -780 c-606 -768 -616 -780 -687
--780 -71 0 -82 12 -688 780 l-615 780 -544 5 -543 6 0 -1781z"/></g></g><g transform="translate(1476.87,106)" fill="currentColor"><path d="M20.98 0.74Q17.51 0.74 14.30 0.07Q11.09 -0.61 8.61 -2.14Q6.13 -3.66 4.69 -6.09Q3.25 -8.51 3.25 -12.02Q3.25 -12.37 3.26 -12.67Q3.28 -12.97 3.31 -13.27H9.26Q9.24 -13.06 9.21 -12.66Q9.17 -12.26 9.17 -11.96Q9.17 -9.46 10.67 -7.74Q12.16 -6.03 14.80 -5.17Q17.45 -4.31 20.80 -4.31Q22.27 -4.31 23.90 -4.50Q25.52 -4.69 27.04 -5.16Q28.56 -5.62 29.77 -6.40Q30.98 -7.18 31.70 -8.34Q32.41 -9.50 32.41 -11.15Q32.41 -13.26 31.22 -14.65Q30.03 -16.04 28.04 -16.96Q26.05 -17.88 23.54 -18.59Q21.02 -19.30 18.35 -19.98Q15.69 -20.66 13.17 -21.57Q10.66 -22.47 8.66 -23.78Q6.67 -25.08 5.49 -27.09Q4.30 -29.09 4.30 -31.95Q4.30 -34.59 5.39 -36.70Q6.47 -38.82 8.61 -40.28Q10.75 -41.74 13.89 -42.51Q17.04 -43.28 21.15 -43.28Q24.47 -43.28 27.37 -42.58Q30.26 -41.88 32.47 -40.42Q34.68 -38.95 35.92 -36.70Q37.17 -34.45 37.17 -31.31V-30.56H31.31V-31.50Q31.31 -33.61 30.01 -35.09Q28.71 -36.57 26.46 -37.40Q24.21 -38.22 21.32 -38.22Q17.59 -38.22 15.13 -37.48Q12.68 -36.74 11.47 -35.43Q10.26 -34.13 10.26 -32.41Q10.26 -30.49 11.44 -29.21Q12.63 -27.93 14.64 -27.07Q16.64 -26.21 19.16 -25.53Q21.67 -24.86 24.32 -24.16Q26.98 -23.46 29.49 -22.56Q32.01 -21.65 34.01 -20.30Q36.02 -18.95 37.21 -16.93Q38.39 -14.92 38.39 -12.03Q38.39 -7.52 36.15 -4.69Q33.91 -1.86 30.00 -0.56Q26.08 0.74 20.98 0.74Z M74.96 0.00V-42.53H107.71V-37.44H80.86V-24.32H104.98V-19.23H80.86V-5.09H108.08V0.00Z M163.98 0.74Q153.70 0.74 148.33 -4.64Q142.96 -10.03 142.96 -21.27Q142.96 -28.60 145.44 -33.48Q147.93 -38.36 152.76 -40.82Q157.58 -43.28 164.57 -43.28Q168.86 -43.28 172.40 -42.33Q175.94 -41.39 178.53 -39.50Q181.12 -37.61 182.51 -34.75Q183.90 -31.90 183.90 -28.02H177.90Q177.90 -30.75 176.89 -32.69Q175.88 -34.63 174.07 -35.87Q172.26 -37.11 169.84 -37.67Q167.43 -38.22 164.65 -38.22Q160.95 -38.22 158.05 -37.28Q155.15 -36.34 153.15 -34.34Q151.14 -32.34 150.11 -29.25Q149.07 -26.17 149.07 -21.89V-20.58Q149.07 -14.79 150.83 -11.20Q152.58 -7.60 155.93 -5.96Q159.28 -4.31 164.02 -4.31Q168.79 -4.31 171.87 -5.65Q174.96 -7.00 176.48 -9.73Q178.01 -12.47 178.01 -16.60V-17.37H163.01V-22.36H183.93V0.00H179.51L178.88 -5.37Q177.22 -3.22 174.91 -1.87Q172.60 -0.52 169.85 0.11Q167.09 0.74 163.98 0.74Z M239.30 0.74Q233.90 0.74 230.01 -1.00Q226.12 -2.74 224.04 -6.48Q221.96 -10.23 221.96 -16.09V-42.53H227.88V-15.48Q227.88 -9.93 230.88 -7.13Q233.88 -4.34 239.30 -4.34Q244.81 -4.34 247.92 -7.13Q251.02 -9.93 251.02 -15.48V-42.53H256.89V-16.09Q256.89 -10.23 254.78 -6.48Q252.67 -2.74 248.73 -1.00Q244.80 0.74 239.30 0.74Z M295.31 0.00V-42.53H317.67Q322.04 -42.53 324.91 -40.95Q327.78 -39.36 329.22 -36.56Q330.65 -33.75 330.65 -30.07Q330.65 -25.68 328.65 -22.52Q326.65 -19.36 323.19 -17.97L332.14 0.00H325.67L317.40 -16.95H301.21V0.00ZM301.21 -21.97H317.10Q320.69 -21.97 322.69 -24.14Q324.69 -26.31 324.69 -30.10Q324.69 -32.43 323.83 -34.05Q322.97 -35.67 321.29 -36.56Q319.61 -37.44 317.10 -37.44H301.21Z M387.36 0.74Q380.76 0.74 375.99 -1.69Q371.23 -4.12 368.68 -9.01Q366.14 -13.91 366.14 -21.27Q366.14 -28.68 368.68 -33.55Q371.23 -38.42 375.99 -40.85Q380.76 -43.28 387.36 -43.28Q394.03 -43.28 398.78 -40.85Q403.52 -38.42 406.07 -33.55Q408.61 -28.68 408.61 -21.27Q408.61 -13.91 406.07 -9.01Q403.52 -4.12 398.78 -1.69Q394.03 0.74 387.36 0.74ZM387.36 -4.31Q390.87 -4.31 393.67 -5.27Q396.48 -6.23 398.45 -8.23Q400.43 -10.23 401.48 -13.29Q402.53 -16.36 402.53 -20.58V-21.89Q402.53 -26.14 401.48 -29.22Q400.43 -32.31 398.45 -34.31Q396.48 -36.31 393.67 -37.26Q390.87 -38.22 387.36 -38.22Q383.85 -38.22 381.06 -37.26Q378.27 -36.31 376.30 -34.31Q374.32 -32.31 373.29 -29.22Q372.25 -26.14 372.25 -21.89V-20.58Q372.25 -16.36 373.29 -13.29Q374.32 -10.23 376.30 -8.23Q378.27 -6.23 381.06 -5.27Q383.85 -4.31 387.36 -4.31Z M460.69 0.74Q457.21 0.74 454.00 0.07Q450.79 -0.61 448.31 -2.14Q445.83 -3.66 444.39 -6.09Q442.95 -8.51 442.95 -12.02Q442.95 -12.37 442.97 -12.67Q442.98 -12.97 443.01 -13.27H448.97Q448.94 -13.06 448.91 -12.66Q448.88 -12.26 448.88 -11.96Q448.88 -9.46 450.37 -7.74Q451.86 -6.03 454.51 -5.17Q457.15 -4.31 460.50 -4.31Q461.98 -4.31 463.60 -4.50Q465.23 -4.69 466.74 -5.16Q468.26 -5.62 469.47 -6.40Q470.69 -7.18 471.40 -8.34Q472.11 -9.50 472.11 -11.15Q472.11 -13.26 470.92 -14.65Q469.74 -16.04 467.75 -16.96Q465.76 -17.88 463.24 -18.59Q460.73 -19.30 458.06 -19.98Q455.39 -20.66 452.87 -21.57Q450.36 -22.47 448.37 -23.78Q446.38 -25.08 445.19 -27.09Q444.00 -29.09 444.00 -31.95Q444.00 -34.59 445.09 -36.70Q446.18 -38.82 448.32 -40.28Q450.46 -41.74 453.60 -42.51Q456.74 -43.28 460.85 -43.28Q464.18 -43.28 467.07 -42.58Q469.97 -41.88 472.17 -40.42Q474.38 -38.95 475.63 -36.70Q476.87 -34.45 476.87 -31.31V-30.56H471.01V-31.50Q471.01 -33.61 469.71 -35.09Q468.41 -36.57 466.16 -37.40Q463.91 -38.22 461.02 -38.22Q457.29 -38.22 454.84 -37.48Q452.38 -36.74 451.17 -35.43Q449.96 -34.13 449.96 -32.41Q449.96 -30.49 451.15 -29.21Q452.34 -27.93 454.34 -27.07Q456.35 -26.21 458.86 -25.53Q461.38 -24.86 464.03 -24.16Q466.68 -23.46 469.20 -22.56Q471.71 -21.65 473.72 -20.30Q475.72 -18.95 476.91 -16.93Q478.10 -14.92 478.10 -12.03Q478.10 -7.52 475.86 -4.69Q473.62 -1.86 469.70 -0.56Q465.78 0.74 460.69 0.74Z"/></g></svg></a>
-    <nav class="nav" aria-label="Principal">
-      <a href="index.html">Voltar ao site</a>
-      <a href="politica-de-privacidade.html">Política de Privacidade</a>
-      <a href="termos-de-uso.html">Termos de Uso</a>
-    </nav>
+<div class="page">
+<div class="shell">
+<div class="hero-panel">
+  <div class="deco-a" aria-hidden="true"></div><div class="deco-b" aria-hidden="true"></div>
+  <div class="deco-c" aria-hidden="true"></div><div class="deco-d" aria-hidden="true"></div>
+  <div class="container nav-wrap">
+    <div class="navbar">
+      <a class="brand" href="index.html" aria-label="Dinamus Seguros — início"><img src="img/logo-white.svg" alt="Dinamus Seguros"></a>
+      <nav class="nav-links" aria-label="Principal"><a href="index.html">Início</a><a href="seguros.html">Seguros</a><a href="vida.html">Vida</a><a href="consorcio.html">Consórcio</a><a href="sobre.html">A Dinamus</a></nav>
+      <div class="nav-actions">
+        <button type="button" class="iconbtn js-theme" aria-label="Alternar tema"><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"></path></svg><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button>
+        <a class="btn btn-acc nav-wa" href="https://wa.me/5577988711313" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.86 9.86 0 0 0 12.04 2m0 18.14a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg> (77) 98871-1313</a>
+        <button type="button" class="menu-btn" aria-expanded="false" aria-label="Menu"><svg class="icon-burger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><svg class="icon-x" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
+      </div>
+    </div>
+    <nav class="mobile-menu" aria-label="Menu"><a href="index.html">Início</a><a href="seguros.html">Seguros</a><a href="vida.html">Vida</a><a href="consorcio.html">Consórcio</a><a href="sobre.html">A Dinamus</a><a class="btn btn-acc" href="https://wa.me/5577988711313" target="_blank" rel="noopener">WhatsApp (77) 98871-1313</a></nav>
   </div>
-</header>
-<main>
-<section class="section legal-doc">
-  <div class="wrap">
-    <p class="crumb"><a href="index.html">Início</a> <span>/</span> Termos de Uso</p>
-    <h1 style="font-size:var(--step-4);margin-block:.8rem 1rem;">Termos de Uso</h1>
+  <div class="container hero">
+<div class="hero-legal">
+    <span class="eyebrow-onpanel">Última atualização: 30 de agosto de 2026</span>
+    <h1>Termos de Uso</h1>
     <p class="lede">Estas são as regras de uso do site da Dinamus. Ao navegar, simular ou enviar seus dados por aqui, você concorda com elas.</p>
-    <p class="doc-meta">Última atualização: 30 de agosto de 2026 · Vigente desde: 30 de agosto de 2026</p>
-
-    <div class="doc">
-      <h2><span class="n">1</span> Quem opera este site</h2>
+  </div>
+  </div>
+</div>
+</div>
+<main>
+<div class="legal-body">
+<div class="legal-cards">
+<div class="doc-sec">
+<h2><span class="n">1</span> Quem opera este site</h2>
       <p>Este site é operado pela <strong>Dinamus Administradora e Corretora de Seguros Ltda</strong>, CNPJ <span class="placeholder">04.751.765/0001-14</span>, com sede em <span class="placeholder">endereço completo</span>, Vitória da Conquista/BA, corretora de seguros registrada na SUSEP sob o nº <span class="placeholder">informar</span>.</p>
-
-      <h2><span class="n">2</span> O que a Dinamus faz — e o que não faz</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">2</span> O que a Dinamus faz — e o que não faz</h2>
       <p>A Dinamus atua como <strong>corretora de seguros</strong>, intermediando a contratação junto a seguradoras autorizadas pela SUSEP, e como <strong>representante autorizada</strong> da administradora de consórcio <span class="placeholder">nome da administradora parceira</span>, autorizada a funcionar pelo Banco Central do Brasil.</p>
       <p>Isso significa que a Dinamus <strong>não é seguradora nem administradora de consórcio</strong>. A aceitação do risco, a emissão da apólice, a análise e o pagamento de indenizações são de responsabilidade exclusiva da seguradora. A formação e a administração dos grupos de consórcio, a gestão dos recursos e as contemplações são de responsabilidade exclusiva da administradora.</p>
-
-      <h2><span class="n">3</span> Natureza das informações publicadas</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">3</span> Natureza das informações publicadas</h2>
       <p>O conteúdo deste site tem <strong>caráter informativo</strong>. Nada aqui constitui oferta vinculante, proposta de contrato, cotação formal, consultoria de investimentos ou recomendação personalizada.</p>
-
-      <h2><span class="n">4</span> Simuladores</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">4</span> Simuladores</h2>
       <p>Os simuladores de consórcio, de seguros e de seguro de vida produzem <strong>estimativas de referência</strong>, calculadas no seu próprio navegador a partir dos valores que você informa e de percentuais médios de mercado indicados nas próprias telas.</p>
       <ul>
         <li>Não são cotação, não são proposta e não geram direito à contratação nas condições exibidas.</li>
@@ -752,12 +72,14 @@ c0 953 4 1090 30 1090 16 0 459 -490 984 -1090 l953 -1090 507 0 506 0 0 1780
         <li>Valores efetivos dependem de análise de risco, perfil, grupo disponível, seguradora, coberturas escolhidas e aceitação da proposta.</li>
         <li>Nenhum resultado de simulação garante data de contemplação, aprovação de crédito ou aceitação de risco.</li>
       </ul>
-
-      <h2><span class="n">5</span> Envio de dados e contato</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">5</span> Envio de dados e contato</h2>
       <p>Ao preencher o formulário ou acionar os botões de WhatsApp, você autoriza a Dinamus a entrar em contato pelos meios informados para apresentar simulações e propostas. O tratamento desses dados segue a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>, que integra estes Termos.</p>
       <p>Você se compromete a fornecer informações verdadeiras. Dados incorretos comprometem a cotação e, em caso de contratação, podem gerar recusa de cobertura pela seguradora.</p>
-
-      <h2><span class="n">6</span> Uso permitido</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">6</span> Uso permitido</h2>
       <p>Você pode navegar, simular e compartilhar os conteúdos deste site para fins pessoais e informativos. É vedado:</p>
       <ul>
         <li>copiar, reproduzir ou explorar comercialmente o conteúdo sem autorização escrita;</li>
@@ -766,40 +88,96 @@ c0 953 4 1090 30 1090 16 0 459 -490 984 -1090 l953 -1090 507 0 506 0 0 1780
         <li>utilizar a marca, o logotipo ou a identidade visual da Dinamus sem autorização;</li>
         <li>enviar dados de terceiros sem que eles tenham consentido.</li>
       </ul>
-
-      <h2><span class="n">7</span> Propriedade intelectual</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">7</span> Propriedade intelectual</h2>
       <p>Marca, logotipo, textos, ilustrações, layout e código-fonte deste site pertencem à Dinamus ou foram por ela licenciados, e são protegidos pela Lei nº 9.610/1998 e pela Lei nº 9.279/1996. O acesso ao site não transfere nenhum direito sobre esses ativos.</p>
-
-      <h2><span class="n">8</span> Links e serviços de terceiros</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">8</span> Links e serviços de terceiros</h2>
       <p>Este site direciona a canais de terceiros, como WhatsApp, canais de consorciado e sites de seguradoras. Não controlamos esses ambientes e não respondemos pelo conteúdo, pela disponibilidade ou pelas práticas de privacidade deles. Leia os termos de cada um.</p>
-
-      <h2><span class="n">9</span> Disponibilidade</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">9</span> Disponibilidade</h2>
       <p>Trabalhamos para manter o site no ar, mas ele pode ficar indisponível por manutenção, falha técnica ou motivo alheio ao nosso controle. Não há garantia de funcionamento ininterrupto ou livre de erros, e a indisponibilidade não gera direito a indenização.</p>
-
-      <h2><span class="n">10</span> Limitação de responsabilidade</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">10</span> Limitação de responsabilidade</h2>
       <p>Dentro dos limites da lei, a Dinamus não responde por decisões tomadas exclusivamente com base em estimativas dos simuladores, por danos decorrentes do uso indevido do site, nem por atos e omissões de seguradoras, administradoras e demais terceiros. Nada nestes Termos afasta os direitos assegurados ao consumidor pela Lei nº 8.078/1990.</p>
-
-      <h2><span class="n">11</span> Reclamações e canais oficiais</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">11</span> Reclamações e canais oficiais</h2>
       <p>Reclamações sobre atendimento podem ser feitas diretamente conosco pelo WhatsApp (77) 98871-1313 ou pelo e-mail <span class="placeholder">contato@dinamus.com.br</span>. Questões relativas a seguros podem ser levadas à SUSEP e, no caso de consórcio, ao Banco Central do Brasil, além dos órgãos de defesa do consumidor.</p>
-
-      <h2><span class="n">12</span> Alterações destes Termos</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">12</span> Alterações destes Termos</h2>
       <p>Podemos alterar estes Termos a qualquer momento para refletir mudanças legais ou operacionais. A versão vigente é sempre a publicada nesta página, com a data indicada no topo. O uso do site após a alteração significa concordância com a nova versão.</p>
-
-      <h2><span class="n">13</span> Lei aplicável e foro</h2>
+</div>
+<div class="doc-sec">
+<h2><span class="n">13</span> Lei aplicável e foro</h2>
       <p>Estes Termos são regidos pela lei brasileira. Fica eleito o foro da comarca de Vitória da Conquista, Bahia, para dirimir controvérsias, ressalvado o direito do consumidor de ajuizar ação no foro de seu domicílio.</p>
+</div>
+</div>
+<p class="doc-note">Este documento foi redigido para refletir a operação deste site. Recomendamos revisão por advogado antes da publicação definitiva, especialmente quanto às cláusulas de limitação de responsabilidade e à indicação da administradora parceira.</p>
+</div>
+</main>
+<section id="contato" class="container" style="padding:48px 24px 72px;width:100%">
+  <div class="contact-band">
+    <div class="deco-ring" aria-hidden="true"></div>
+    <div class="contact-info">
+      <span class="eyebrow-onpanel">Fale com a gente</span>
+      <h2 class="h2">Conte o seu objetivo. A gente monta o plano.</h2>
+      <p class="lede">Preencha os dados e um consultor entra em contato pelo WhatsApp com uma proposta real, baseada nas condições desta semana. Sem custo e sem compromisso.</p>
+      <div class="contact-cards">
+        <div><div class="kicker">WhatsApp</div><a class="big" href="https://wa.me/5577988711313" target="_blank" rel="noopener">(77) 98871-1313</a></div>
+        <div><div class="kicker">E-mail</div><a href="mailto:contato@dinamus.com.br">contato@dinamus.com.br</a></div>
+        <div><div class="kicker">Atendimento</div><div class="val">Segunda a sexta, 8h às 18h</div></div>
+        <div><div class="kicker">Endereço</div><div class="val"><span class="marker-inv">endereço completo</span> — Vitória da Conquista, BA</div></div>
+      </div>
     </div>
-
-    <p class="disclaimer">Este documento foi redigido para refletir a operação deste site. Recomendamos revisão por advogado antes da publicação definitiva, especialmente quanto às cláusulas de limitação de responsabilidade e à indicação da administradora parceira.</p>
+    <form id="form-contato" class="contact-form" novalidate>
+      <div class="form-row">
+        <label>Nome completo<input type="text" name="nome" autocomplete="name" placeholder="Como podemos te chamar"></label>
+        <label>WhatsApp<input type="tel" name="whats" autocomplete="tel" placeholder="(77) 90000-0000"></label>
+      </div>
+      <div class="form-row">
+        <label>Sobre o que quer falar<select name="assunto" id="f-assunto"><option value="Seguros">Seguros (auto, residencial, empresarial)</option><option value="Seguro de vida">Seguro de vida</option><option value="Consórcio">Consórcio</option><option value="Não sei ainda">Quero uma análise geral</option></select></label>
+        <label>Cidade<input type="text" name="cidade" value="Vitória da Conquista"></label>
+      </div>
+      <div class="form-row">
+        <label>Valor pretendido ou do bem<select name="faixa"><option>Até R$ 50 mil</option><option>R$ 50 mil a R$ 150 mil</option><option selected>R$ 150 mil a R$ 300 mil</option><option>R$ 300 mil a R$ 600 mil</option><option>Acima de R$ 600 mil</option><option>Não se aplica</option></select></label>
+        <label>Prazo<select name="quando"><option>É urgente</option><option selected>Nos próximos meses</option><option>Só estou pesquisando</option></select></label>
+      </div>
+      <label>Alguma informação que ajude (opcional)<input type="text" name="obs" id="f-obs" placeholder="Ex.: tenho apólice vencendo em março"></label>
+      <label class="lgpd"><input type="checkbox" name="lgpd"><span>Autorizo a Dinamus a entrar em contato pelo WhatsApp, telefone ou e-mail para apresentar propostas. Meus dados não serão compartilhados com terceiros e posso pedir a exclusão a qualquer momento, conforme a LGPD e a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</span></label>
+      <button type="submit" class="btn btn-acc" style="padding:14px 24px">Quero falar com um consultor <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></button>
+      <p class="form-note" id="form-note" aria-live="polite">Ao enviar, abrimos uma conversa no WhatsApp já com os seus dados preenchidos.</p>
+    </form>
   </div>
 </section>
-</main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="legal">
-      <p><strong>Dinamus Administradora e Corretora de Seguros Ltda</strong> — CNPJ <span class="placeholder">04.751.765/0001-14</span> · Registro SUSEP <span class="placeholder">informar</span> · <span class="placeholder">endereço completo</span> · Vitória da Conquista/BA · WhatsApp (77) 98871-1313.</p>
-      <p>© 2026 Dinamus. Todos os direitos reservados. · <a href="politica-de-privacidade.html" style="color:var(--text-2);">Política de Privacidade</a> · <a href="termos-de-uso.html" style="color:var(--text-2);">Termos de Uso</a></p>
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Dinamus — início"><img class="logo-navy" src="img/logo-navy.svg" alt="Dinamus Seguros"><img class="logo-white-f" src="img/logo-white.svg" alt="Dinamus Seguros"></a>
+        <p>Corretora de seguros e consultoria em consórcio em Vitória da Conquista, Bahia. Desde 2001.</p>
+      </div>
+      <div><span class="kicker">Soluções</span><ul><li><a href="seguros.html">Seguros</a></li><li><a href="vida.html">Seguro de vida</a></li><li><a href="consorcio.html">Consórcio</a></li><li><a href="sobre.html">A Dinamus</a></li></ul></div>
+      <div><span class="kicker">Contato</span><ul><li><a href="https://wa.me/5577988711313" target="_blank" rel="noopener">WhatsApp (77) 98871-1313</a></li><li><a href="mailto:contato@dinamus.com.br">contato@dinamus.com.br</a></li><li><a href="#contato">Formulário de contato</a></li></ul></div>
+      <div><span class="kicker">Legal</span><ul><li><a href="politica-de-privacidade.html">Política de Privacidade</a></li><li><a href="termos-de-uso.html">Termos de Uso</a></li></ul></div>
+    </div>
+    <a class="footer-cta" href="https://wa.me/5577988711313?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">
+      <div class="footer-cta-txt"><span class="eyebrow">Fale com a gente hoje</span><span class="footer-cta-big">Precisa de ajuda?</span></div>
+      <span class="footer-cta-circle"><svg width="44%" height="44%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+    </a>
+    <div class="footer-legal">
+      <span>© <span class="js-ano">2026</span> Dinamus Administradora e Corretora de Seguros Ltda · CNPJ 04.751.765/0001-14 · SUSEP <span class="marker">informar</span></span>
+      <span>Corretora de seguros habilitada pela SUSEP. Consórcio administrado por empresa autorizada pelo Banco Central. Simulações têm caráter informativo.</span>
     </div>
   </div>
 </footer>
+<a class="wa-float" href="https://wa.me/5577988711313?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20simular%20um%20cons%C3%B3rcio." target="_blank" rel="noopener" aria-label="Falar com a Dinamus no WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.86 9.86 0 0 0 12.04 2m0 18.14a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg> WhatsApp</a>
+</div>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

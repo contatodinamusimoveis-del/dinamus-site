@@ -1,39 +1,45 @@
-SITE DINAMUS SEGUROS
-====================
+SITE DINAMUS SEGUROS — NOVO DESIGN
+==================================
 
 Conteúdo desta pasta
 
-  index.html                     Site completo (Início, Seguros, Vida, Consórcio, A Dinamus)
+  index.html                     Início (com simulador rápido)
+  seguros.html                   Seguros (ramos, sinistro, simulador, FAQ)
+  vida.html                      Seguro de vida (coberturas, calculadora, mitos, FAQ)
+  consorcio.html                 Consórcio (modalidades, etapas, simulador, comparativo, FAQ)
+  sobre.html                     A Dinamus (quem somos)
   politica-de-privacidade.html   Página avulsa — use esta URL no cadastro do Meta
   termos-de-uso.html             Página avulsa — use esta URL no cadastro do Meta
-  img/                           As 11 fotos usadas no site
+  assets/style.css               Folha de estilo (tokens de marca no :root; modo escuro)
+  assets/app.js                  Tema, menu, formulário e simuladores
+  img/                           Fotos, logotipos (logo-white.svg / logo-navy.svg) e favicon.svg
 
 Como visualizar
   Abra index.html em qualquer navegador (duplo clique). Funciona offline.
 
 Como publicar
-  Suba os três arquivos .html e a pasta img/ na raiz do domínio, mantendo a
-  estrutura. As URLs para o Meta ficam assim:
+  Suba todos os arquivos .html, a pasta assets/ e a pasta img/ na raiz do
+  domínio, mantendo a estrutura. As URLs para o Meta ficam assim:
     https://SEUDOMINIO.com.br/politica-de-privacidade.html
     https://SEUDOMINIO.com.br/termos-de-uso.html
 
-Como trocar uma foto
-  Substitua o arquivo dentro de img/ mantendo o mesmo nome. Nada mais muda.
-  Para desligar uma foto e voltar à ilustração, deixe a entrada vazia no
-  bloco window.DINAMUS_FOTOS, no topo do index.html.
+Modo escuro
+  Segue o tema do aparelho por padrão; o botão sol/lua na navegação alterna
+  e a escolha fica salva no navegador do visitante.
 
-O que ainda falta preencher
-  Os trechos destacados em laranja no site são marcadores. São eles:
-    - número de registro SUSEP
-    - endereço completo
-    - e-mail de contato e e-mail do encarregado de dados (exigido pela LGPD)
-    - nome da administradora de consórcio parceira
-    - número de seguradoras parceiras, patrimônio segurado e taxa de sinistros
-    - depoimentos de clientes
-    - foto real da equipe (img/equipe.jpg)
+O que ainda falta preencher (marcados em laranja no site)
+  - número de registro SUSEP
+  - endereço completo
+  - e-mail do encarregado de dados (exigido pela LGPD)
+  - nome da administradora de consórcio parceira
+  - número de seguradoras parceiras
+  - depoimentos de clientes (3)
+  - marcos da linha do tempo (Anos 2000, Anos 2010) na página A Dinamus
+  - foto real da equipe (img/equipe.jpg)
 
 Fotos
   As 11 imagens vieram do Unsplash, com licença livre para uso comercial e
-  sem atribuição obrigatória.
+  sem atribuição obrigatória. Para trocar, substitua o arquivo em img/
+  mantendo o mesmo nome.
 
 Telefone configurado: (77) 98871-1313
