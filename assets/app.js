@@ -96,7 +96,7 @@
     var HOME = {
       seguros:   { vLabel: 'Valor do bem', vMin: 20000, vMax: 500000, vStep: 5000, vVal: 80000, aLabel: 'Perfil de risco', aMin: 1, aMax: 3, aStep: 1, aVal: 2, outLabel: 'Prêmio anual estimado', cta: 'Ver a página de seguros', href: 'seguros.html', nota: 'Faixa de referência de mercado para seguro auto. Não é cotação.' },
       vida:      { vLabel: 'Renda mensal da família', vMin: 1500, vMax: 40000, vStep: 500, vVal: 6000, aLabel: 'Meses de proteção', aMin: 12, aMax: 120, aStep: 6, aVal: 36, outLabel: 'Capital sugerido', cta: 'Ver a página de vida', href: 'vida.html', nota: 'Cálculo simplificado. A calculadora completa considera dívidas e reservas.' },
-      consorcio: { vLabel: 'Valor do crédito', vMin: 30000, vMax: 1000000, vStep: 10000, vVal: 200000, aLabel: 'Prazo', aMin: 60, aMax: 220, aStep: 20, aVal: 180, outLabel: 'Parcela estimada', cta: 'Ver a página de consórcio', href: 'consorcio.html', nota: 'Estimativa com taxa de administração de 19% e fundo de reserva de 2%. Não é proposta.' }
+      consorcio: { vLabel: 'Valor do crédito', vMin: 100000, vMax: 700000, vStep: 10000, vVal: 300000, aLabel: 'Prazo', aMin: 55, aMax: 183, aStep: 1, aVal: 183, outLabel: 'Parcela estimada', cta: 'Ver a página de consórcio', href: 'consorcio.html', nota: 'Estimativa com as taxas reais dos grupos Bradesco Consórcios (assembleia de 15/10/2026). Não é proposta.' }
     };
     var hm = 'seguros', hv = 80000, ha = 2;
     var hValor = $('#hValor'), hAux = $('#hAux');
@@ -114,7 +114,10 @@
       var cta = $('#hCta'); cta.firstChild.textContent = c.cta + ' '; cta.href = c.href;
       var out, rows, aOut;
       if (hm === 'consorcio') {
-        var total = hv * 1.21, parc = total / ha;
+        /* fatores reais Bradesco: automóvel ~16% adm + 3% fundo; imóvel ~21,5% + 3% (+ seguro mensal) */
+        var imovel = hv >= 200000;
+        var total = hv * (imovel ? 1.245 : 1.19) + hv * (imovel ? 0.00043 : 0.000598) * ha;
+        var parc = total / ha;
         out = brl2.format(parc); aOut = ha + ' meses';
         rows = [['Crédito', brl0.format(hv)], ['Prazo', ha + ' meses'], ['Total a pagar', brl0.format(total)]];
       } else if (hm === 'seguros') {
@@ -139,12 +142,33 @@
   /* ---------- simulador de consórcio ---------- */
   var cSim = $('#sim-consorcio');
   if (cSim) {
+    /* Condições reais dos grupos Bradesco Consórcios em andamento
+       (extração Newcon de 04/11/2026 · assembleia de 15/10/2026).
+       taxa() devolve a taxa de administração praticada na faixa de prazo. */
     var SEG = {
-      imoveis:  { min: 80000, max: 1500000, step: 10000, valor: 300000, prazos: [120, 150, 180, 200, 220], prazo: 180, taxa: 0.19, fundo: 0.02, juros: 0.0099, rot: 'imóveis' },
-      autos:    { min: 30000, max: 400000, step: 5000, valor: 90000, prazos: [60, 72, 80, 100], prazo: 80, taxa: 0.17, fundo: 0.02, juros: 0.0159, rot: 'automóveis' },
-      servicos: { min: 10000, max: 800000, step: 5000, valor: 60000, prazos: [24, 36, 48, 60, 80, 100], prazo: 60, taxa: 0.21, fundo: 0.02, juros: 0.0199, rot: 'serviços e pesados' }
+      imoveis: {
+        min: 300000, max: 700000, step: 10000, valor: 400000,
+        prazos: [112, 156, 162, 174, 183], prazo: 183,
+        taxa: function (p) { return p <= 112 ? 0.226 : p <= 162 ? 0.205 : 0.215; },
+        fundo: 0.03, seguro: 0.00043, juros: 0.0099, rot: 'imóveis',
+        lance: 'Referência real: na assembleia de 15/10/2026, os lances contemplados em imóveis ficaram entre 38% e 63% do crédito — média dos menores lances vencedores: 50%.'
+      },
+      autos: {
+        min: 100000, max: 125000, step: 1000, valor: 104000,
+        prazos: [55, 59, 67, 75, 80, 88, 91], prazo: 80,
+        taxa: function (p) { return p <= 67 ? 0.155 : p <= 88 ? 0.16 : 0.17; },
+        fundo: 0.03, seguro: 0.000598, juros: 0.0159, rot: 'automóveis',
+        lance: 'Referência real: na assembleia de 15/10/2026, os lances contemplados em automóveis ficaram entre 22% e 55% do crédito — média dos menores lances vencedores: 40%.'
+      },
+      servicos: {
+        min: 10000, max: 800000, step: 5000, valor: 60000,
+        prazos: [24, 36, 48, 60, 80, 100], prazo: 60,
+        taxa: function () { return 0.21; },
+        fundo: 0.02, seguro: 0, juros: 0.0199, rot: 'serviços e pesados',
+        lance: 'Serviços e pesados: grupos e lances variam — chame no WhatsApp para a condição da semana.'
+      }
     };
-    var csK = 'imoveis', cv = 300000, cp = 180, cl = 0;
+    var csK = 'imoveis', cv = 400000, cp = 183, cl = 0;
     var credito = $('#credito'), lance = $('#lance');
     function cRender() {
       var c = SEG[csK];
@@ -161,18 +185,25 @@
         pr.appendChild(b);
       });
       $('#cLOut').textContent = cl + '%';
-      var total = cv * (1 + c.taxa + c.fundo);
-      var parc = (total - total * cl / 100) / cp;
+      var taxa = c.taxa(cp);
+      var segMensal = cv * c.seguro;
+      var totalBase = cv * (1 + taxa + c.fundo);
+      var total = totalBase + segMensal * cp;
+      var parc = (totalBase - totalBase * cl / 100) / cp + segMensal;
       var i = c.juros;
       var totalFin = cv * (i / (1 - Math.pow(1 + i, -cp))) * cp;
       var econ = totalFin - total;
       $('#cParcela').textContent = brl2.format(parc);
-      $('#cRows').innerHTML = [
+      var rows = [
         ['Crédito contratado', brl0.format(cv)], ['Prazo', cp + ' meses'],
-        ['Taxa de administração', Math.round(c.taxa * 100) + '% · ' + brl0.format(cv * c.taxa)],
-        ['Fundo de reserva', '2% · ' + brl0.format(cv * c.fundo)],
-        ['Total a pagar', brl0.format(total)]
-      ].map(function (r) { return '<div><span>' + r[0] + '</span><b>' + r[1] + '</b></div>'; }).join('');
+        ['Taxa de administração', (taxa * 100).toFixed(1).replace('.', ',') + '% · ' + brl0.format(cv * taxa)],
+        ['Fundo de reserva', Math.round(c.fundo * 100) + '% · ' + brl0.format(cv * c.fundo)]
+      ];
+      if (segMensal > 0) rows.push(['Seguro prestamista', brl2.format(segMensal) + ' por mês']);
+      rows.push(['Total a pagar', brl0.format(total)]);
+      var lanceInfo = $('#cLanceInfo');
+      if (lanceInfo) lanceInfo.textContent = c.lance;
+      $('#cRows').innerHTML = rows.map(function (r) { return '<div><span>' + r[0] + '</span><b>' + r[1] + '</b></div>'; }).join('');
       $('#cCompare').textContent = 'No financiamento equivalente, o total ficaria em ' + brl0.format(totalFin) +
         (econ > 0 ? ' — uma diferença estimada de ' + brl0.format(econ) + '.' : ' — nesse cenário o financiamento sai mais barato.');
       var msg = 'Olá! Simulei no site: consórcio de ' + c.rot + ', crédito de ' + brl0.format(cv) + ' em ' + cp + ' meses, parcela estimada de ' + brl2.format(parc) + '. Quero uma proposta real.';
