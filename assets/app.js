@@ -1,7 +1,7 @@
 /* DINAMUS — comportamento do site (tema, menu, formulário, simuladores) */
 (function () {
   'use strict';
-  var WA = '5577988711313';
+  var WA = '5577998061818';
   var brl0 = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
   var brl2 = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 });
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -66,7 +66,7 @@
       var linhas = ['Olá! Sou ' + nome + ' (' + whats + ').', 'Assunto: ' + form.assunto.value, 'Cidade: ' + form.cidade.value, 'Valor: ' + form.faixa.value, 'Prazo: ' + form.quando.value];
       if (form.obs.value.trim()) linhas.push('Obs.: ' + form.obs.value.trim());
       window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(linhas.join('\n')), '_blank', 'noopener');
-      note.textContent = 'Pronto, ' + nome.split(' ')[0] + ' — abrimos o WhatsApp com os seus dados. Se a janela não abriu, chame no (77) 98871-1313.';
+      note.textContent = 'Pronto, ' + nome.split(' ')[0] + ' — abrimos o WhatsApp com os seus dados. Se a janela não abriu, chame no (77) 99806-1818.';
     });
   }
 
